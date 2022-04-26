@@ -80,7 +80,7 @@ struct ContentView: View {
             
             Divider()
                 
-                drawingView(deltaLength: lengthArray[Int(sliderValue)])
+                drawingView(deltaLength: lengthArray[Int(sliderValue)], maxDeltaLength: lengthArray[lengthArray.count - 1])
                     .padding()
                     .aspectRatio(1, contentMode: .fit)
                     .drawingGroup()
