@@ -42,9 +42,9 @@ func loadCSV(from csvName: String) -> [ssData] {
         let columns = row.components(separatedBy: ",")
         let strain = Double(columns[0]) ?? 0
         let stress = Double(columns[1]) ?? 0
-        let aluminium = ssData(stress: stress, strain: strain)
+        let data = ssData(stress: stress, strain: strain)
         
-        csvToStruct.append(aluminium)
+        csvToStruct.append(data)
     }
     
     return csvToStruct

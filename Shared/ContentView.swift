@@ -18,8 +18,9 @@ struct ContentView: View {
     
     var data = loadCSV(from: "Aluminium")
     var data2 = loadCSV(from: "Copper706")
+    var data3 = loadCSV(from: "Zinc")
     
-    @State var materials = ["Aluminium", "Copper"]
+    @State var materials = ["Aluminium", "Copper", "Zinc"]
     @State var selectedMaterial = ""
     @State var E = 0.0
     @State var sliderValue: Double = 0.0
@@ -112,7 +113,14 @@ struct ContentView: View {
                 self.selector = 1
                 await self.calculate2()
                 }
+            
+        case "Zinc":
         
+        Task.init{
+            self.selector = 1
+            await self.calculate3()
+            }
+            
             default:
             Task.init{
             
@@ -193,6 +201,37 @@ struct ContentView: View {
     }
     
     
+    func calculate3() async {
+        
+        
+        //pass the plotDataModel to the Calculator
+       // calculator.plotDataModel = self.plotData.plotArray[0]
+        
+        setupPlotDataModel(selector: 1)
+        
+            
+        let _ = await withTaskGroup(of:  Void.self) { taskGroup in
+
+
+
+                taskGroup.addTask {
+
+        //Calculate the new plotting data and place in the plotDataModel
+        await calculator.plotZinc()
+                  
+        // This forces a SwiftUI update. Force a SwiftUI update.
+        await self.plotData.objectWillChange.send()
+                    
+                }
+                
+            }
+    
+        E = youngsMod.calculateYoungs(Stress: calculator.stress, Strain: calculator.strain)
+        forceArray.removeAll()
+        lengthArray.removeAll()
+        forceArray = youngsMod.getForceRequired(Stress: calculator.stress)
+        lengthArray = youngsMod.getLengthChange(Strain: calculator.strain)
+    }
 
 }
 

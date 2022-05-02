@@ -15,7 +15,8 @@ class CalculatePlotData: ObservableObject {
     var theText = ""
     var data = loadCSV(from: "Aluminium")
     var data2 = loadCSV(from: "Copper706")
-   
+    var data3 = loadCSV(from: "Zinc")
+    
     @Published var stress: [Double] = []
     @Published var strain: [Double] = []
     
@@ -113,7 +114,36 @@ class CalculatePlotData: ObservableObject {
         return
     }
     
-    
+    func plotZinc() async {
+        //set plot parameters
+        yMax = 600.0
+        yMin = 0.0
+        xMax = 1.0
+        xMin = -0.01
+                
+        await setThePlotParameters(color: "Blue", xLabel: "Strain", yLabel: "Stress", title: "Zinc")
+        
+        //plot data
+        var plotData :[plotDataType] =  []
+        stress.removeAll()
+        strain.removeAll()
+      
+        for values in data3{
+            
+            stress.append(values.stress)
+            strain.append(values.strain)
+            
+            let dataPoint: plotDataType = [.X: values.strain, .Y: values.stress]
+            plotData.append(contentsOf: [dataPoint])
+        
+        }
+        
+        await appendDataToPlot(plotData: plotData)
+       
+        
+        return
+    }
+
 }
 
 
