@@ -19,8 +19,8 @@
 		B1C88D31280CB3A4006971CA /* Aluminium.csv in Resources */ = {isa = PBXBuildFile; fileRef = B1C88D2F280CB3A4006971CA /* Aluminium.csv */; };
 		B1C88D33280CB792006971CA /* Youngs modulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C88D32280CB792006971CA /* Youngs modulus.swift */; };
 		B1C88D34280CB792006971CA /* Youngs modulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C88D32280CB792006971CA /* Youngs modulus.swift */; };
-		B8A1542E28207E7400220485 /* Zinc.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8A1542D28207E7400220485 /* Zinc.csv */; };
-		B8A1542F28207E7400220485 /* Zinc.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8A1542D28207E7400220485 /* Zinc.csv */; };
+		B1C88D3C2821C34F006971CA /* Zinc.csv in Resources */ = {isa = PBXBuildFile; fileRef = B1C88D3B2821C34F006971CA /* Zinc.csv */; };
+		B1C88D3D2821C34F006971CA /* Zinc.csv in Resources */ = {isa = PBXBuildFile; fileRef = B1C88D3B2821C34F006971CA /* Zinc.csv */; };
 		D2384D8525BFC5D30082D98A /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2384D8425BFC5D30082D98A /* Tests_iOS.swift */; };
 		D2384D9025BFC5D30082D98A /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2384D8F25BFC5D30082D98A /* Tests_macOS.swift */; };
 		D2384D9225BFC5D30082D98A /* YoungsModulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2384D6925BFC5D20082D98A /* YoungsModulus.swift */; };
@@ -84,7 +84,7 @@
 		B1C88D2C280CB23D006971CA /* Copper706.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Copper706.csv; sourceTree = "<group>"; };
 		B1C88D2F280CB3A4006971CA /* Aluminium.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Aluminium.csv; sourceTree = "<group>"; };
 		B1C88D32280CB792006971CA /* Youngs modulus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Youngs modulus.swift"; sourceTree = "<group>"; };
-		B8A1542D28207E7400220485 /* Zinc.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Zinc.csv; sourceTree = "<group>"; };
+		B1C88D3B2821C34F006971CA /* Zinc.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Zinc.csv; sourceTree = "<group>"; };
 		D2384D6925BFC5D20082D98A /* YoungsModulus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoungsModulus.swift; sourceTree = "<group>"; };
 		D2384D6A25BFC5D20082D98A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D2384D6B25BFC5D30082D98A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 				B1C88D2028036552006971CA /* DataFactory .swift */,
 				B1C88D2F280CB3A4006971CA /* Aluminium.csv */,
 				B1C88D2C280CB23D006971CA /* Copper706.csv */,
-				B8A1542D28207E7400220485 /* Zinc.csv */,
+				B1C88D3B2821C34F006971CA /* Zinc.csv */,
 				D2384D6B25BFC5D30082D98A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -374,7 +374,7 @@
 			files = (
 				B1C88D2D280CB23D006971CA /* Copper706.csv in Resources */,
 				B1C88D30280CB3A4006971CA /* Aluminium.csv in Resources */,
-				B8A1542E28207E7400220485 /* Zinc.csv in Resources */,
+				B1C88D3C2821C34F006971CA /* Zinc.csv in Resources */,
 				D2384D9625BFC5D30082D98A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +385,7 @@
 			files = (
 				B1C88D2E280CB23D006971CA /* Copper706.csv in Resources */,
 				B1C88D31280CB3A4006971CA /* Aluminium.csv in Resources */,
-				B8A1542F28207E7400220485 /* Zinc.csv in Resources */,
+				B1C88D3D2821C34F006971CA /* Zinc.csv in Resources */,
 				D2384D9725BFC5D30082D98A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
