@@ -17,8 +17,8 @@ class CalculatePlotData: ObservableObject {
     var data2 = loadCSV(from: "Copper706")
     var data3 = loadCSV(from: "Zinc")
     
-    @Published var stress: [Double] = []
-    @Published var strain: [Double] = []
+    @Published var stress: [Double] = [1.0, 2.0]
+    @Published var strain: [Double] = [1.0, 2.0]
     
     var yMax = 80.0
     var yMin = 0.0

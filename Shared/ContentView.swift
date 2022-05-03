@@ -26,7 +26,7 @@ struct ContentView: View {
     @State var sliderValue: Double = 0.0
     @State var forceArray = [1.0, 2.0]
     @State var lengthArray = [1.0, 2.0]
-    
+    @State var materialNeckPoint = 0.0
    
     @State var isChecked:Bool = false
     @State var tempInput = ""
@@ -81,7 +81,11 @@ struct ContentView: View {
             
             Divider()
                 
-                drawingView(deltaLength: lengthArray[Int(sliderValue)], maxDeltaLength: lengthArray[lengthArray.count - 1])
+                drawingView(deltaLength: lengthArray[Int(sliderValue)],
+                            maxDeltaLength: lengthArray[lengthArray.count - 1],
+                            neckingPoint: calculator.strain[Int(sliderValue)],
+                            materialNeckPoint: materialNeckPoint
+                            )
                     .padding()
                     .aspectRatio(1, contentMode: .fit)
                     .drawingGroup()
@@ -105,6 +109,7 @@ struct ContentView: View {
             
             self.selector = 0
             await self.calculate()
+            materialNeckPoint = 0.15
             }
         
             case "Copper":
@@ -112,16 +117,18 @@ struct ContentView: View {
             Task.init{
                 self.selector = 1
                 await self.calculate2()
+                materialNeckPoint = 0.245
                 }
             
         case "Zinc":
         
-        Task.init{
-            self.selector = 1
-            await self.calculate3()
-            }
+            Task.init{
+                self.selector = 1
+                await self.calculate3()
+                materialNeckPoint = 0.12
+                }
             
-            default:
+        default:
             Task.init{
             
             self.selector = 0
