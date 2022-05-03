@@ -109,7 +109,7 @@ struct ContentView: View {
             
             self.selector = 0
             await self.calculate()
-            materialNeckPoint = 0.15
+            materialNeckPoint = 0.052
             }
         
             case "Copper":
@@ -125,7 +125,7 @@ struct ContentView: View {
             Task.init{
                 self.selector = 1
                 await self.calculate3()
-                materialNeckPoint = 0.12
+                materialNeckPoint = 0.10
                 }
             
         default:

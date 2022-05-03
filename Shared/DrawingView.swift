@@ -156,7 +156,7 @@ struct drawPath: Shape {
             
             var path = Path()
             
-            let scaleX = rect.width/(60 + maxDeltaLength)
+            let scaleX = rect.width/(60 + maxDeltaLength + 5.0)
             let scaleY = rect.height/20
         
             path.move(to: CGPoint(x: rect.minX, y: rect.minY))
