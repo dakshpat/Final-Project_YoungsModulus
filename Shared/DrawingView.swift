@@ -27,8 +27,6 @@ struct drawingView: View{
                      neckingPoint: neckingPoint,
                      materialNeckPoint: materialNeckPoint
                     )
-                .stroke(Color.black, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
-                
             
         }
         .background(Color.white)
@@ -60,7 +58,7 @@ struct drawPath: Shape {
     var neckingPoint = 0.0
     var materialNeckPoint = 0.0
     
-    var neckingAngle = 15.0 ///in degree
+    var neckingAngle = 5.0 ///in degree
     
     var youngsMod = youngsModulus()
     
